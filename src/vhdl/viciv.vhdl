@@ -2739,7 +2739,7 @@ begin
           -- @IO:GS $D062 VIC-IV:SCRNPTRBNK screen RAM precise base address (bits 23 - 16)
           screen_ram_base(23 downto 16) <= unsigned(fastio_wdata);
         elsif register_number=99 then
-          -- @IO:GS $D063.0-3 VIC-IV:SCRNPTRMB screen RAM precise base address (bits 31 - 24)
+          -- @IO:GS $D063.0-3 VIC-IV:SCRNPTRMB screen RAM precise base address (bits 27 - 24)
           screen_ram_base(27 downto 24) <= unsigned(fastio_wdata(3 downto 0));
           -- @IO:GS $D063.4-5 VIC-IV:CHRCOUNT Number of characters to display per
           -- row (MSBs)
@@ -2781,7 +2781,7 @@ begin
           -- @IO:GS $D06D VIC-IV:SPRPTRADRMSB sprite pointer address (bits 15 - 8)
           vicii_sprite_pointer_address(15 downto 8) <= unsigned(fastio_wdata);
         elsif register_number=110 then
-          -- @IO:GS $D06E.0-6 VIC-IV:SPRPTRBNK sprite pointer address (bits 23 - 16)
+          -- @IO:GS $D06E.0-6 VIC-IV:SPRPTRBNK sprite pointer address (bits 22 - 16)
           -- @IO:GS $D06E.7 VIC-IV:SPR!PTR16 16-bit sprite pointer mode (allows sprites to be located on any 64 byte boundary in chip RAM)
           vicii_sprite_pointer_address(23 downto 16) <= unsigned(fastio_wdata);
         elsif register_number=111 then
